@@ -4,21 +4,21 @@ import com.demo.Car.Car;
 import com.demo.User.User;
 
 public class Booking {
-    private String id;
+    private int id;
     private User user;
     private Car car;
 
-    public Booking(String id, User user, Car car) {
+    public Booking(int id, User user, Car car) {
         this.id = id;
         this.user = user;
         this.car = car;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -36,5 +36,14 @@ public class Booking {
 
     public void setCar(Car car) {
         this.car = car;
+    }
+
+    @Override
+    public String toString() {
+        return "Booking{" +
+                "id='" + id + '\'' +
+                ", user=" + user +
+                ", car=" + car +
+                '}';
     }
 }
